@@ -1,0 +1,6 @@
+UPDATES ON THIS VERSION
+- Able to track progress by combining scroll and Quiz in all pages (QUIZ MUST BE IN MCQ CLASS)
+
+
+WORKING ON
+- Make Quiz redo-able

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+.masterTooltip{
+	cursor:help;
+	color:#1681D9;
+	font-style:italic;
+	white-space:nowrap; }
+.tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:10px;
+	padding:10px;
+	color:#fff;
+	font-size:12px Arial;
+	margin-right:20px;
+	max-width:500px; }	
+.tooltip img{
+	margin:0 auto 10px;
+	display:block; }
+.tooltip video{
+	width:100%; }

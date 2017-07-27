@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Analytics Journey</title>
+<link rel="stylesheet" href="content_assets/frameworks/CSS/smu_MCQ.css" >
+<style>	
+	.MCQ {
+		margin-bottom:3em;	}
+	fieldset{
+		margin:1em 0 2em; padding:0 25px; border:2px solid #85B5D0; background: linear-gradient(0deg, #D8DDE8, rgba(244,244,244,0) 90%); }
+	legend {
+		margin-left:5px; padding:0 10px; font-weight:bold; font-size:1.2rem; background-color:#F4F4F4; color: #1169C5;	}
+	legend::first-letter {
+		font-size:2.6rem;	 }		
+	.p3_clickshow {
+		display:none; background:rgba(255,255,255,0.4); padding:.1em 1.2em; border:1px solid rgba(224,233,241,1); margin-bottom:2em;	}
+/*	.p3_clickshowBTN {
+		width:200px; margin-bottom:2em;	}*/
+	.p3_clickshowBTN {
+		padding:.7em 1em; border-radius:10px; cursor:pointer; background:linear-gradient(#494949 45%, black 55%); color:white; font-weight:bold; font-size:.9em; letter-spacing:.4px; margin-bottom:2em;
+	}
+	#p3_imageHolder3 		{ display:none; flex-direction: column; }
+	#p3_imageHolder3 figure { max-width: 432px; margin:0 auto; }
+	
+	@media screen and (min-width: 850px) {
+		#p3_imgHolder{
+			width:100%; position:relative;	}
+		#p3_imgHolder p{
+			position:absolute; width:40%; right:4%; top:20px; margin:0; padding:1em; background:rgba(250,250,250,1.00); border-radius:10px; border:3px solid rgb(200,200,200)		}
+		.p3_clickshowBTN {
+			padding:.3em 1em .4em; border-radius:10px; cursor:pointer; background:linear-gradient(#494949 45%, black 55%); color:white; font-weight:bold; font-size:.9em; letter-spacing:.4px; margin-bottom:2em;
+		}
+		
+		#p3_imageHolder3 		{ flex-direction: row;}
+		#p3_imageHolder3 div 	{ width:50%; }
+		#p3_imageHolder3 figure { margin:78px 0 10px 20px; width:50%; }
+	}
+
+	@media print{
+		#p3_imageHolder3 { flex-direction: row; }
+		#p3_imageHolder3 div 	{ width:45%; }
+		#p3_imageHolder3 figure { margin:10px auto; width:50%; margin-top:-450px; margin-left:300px; }
+	}
+
+</style>
+<script>
+	function showExplanation(e){
+		$(e).next('.p3_clickshow').fadeIn().css('display','flex');
+		$(e).hide();
+		$(e).prev('.instructions').hide();
+	}
+</script>
+</head>
+
+<body>
+    <h2>2 - Analytics Journey</h2>
+	
+	<div id="p3_imgHolder">
+	<img src="content_assets/img/img3_1.jpg" alt="">
+	<p>“I’m trying to start analytics in my business.<br><br>Based on your experience, can you advise me which of the following areas typically happens first in an analytics journey in retail? ”</p>
+	</div>
+    <p class="instructions">Select your answer, and click Done.</p>
+    <div id="QuizComplete">
+        <p>You have completed this Quiz.</p>
+        <!-- <input type="button" id="btn_reviewQUIZ" value="Review Quiz">
+        <input type="button" id="btn_retryQUIZ" value="Retry Quiz"> -->
+    </div>
+    <div class="QUIZ MCQ Scoreless" data-ans=2 style="margin-bottom:4em">
+        <ol style="list-style: upper-latin">
+        	<li><label><input type="radio"> Supply chain / Merchandising</label></li>
+            <li class="correctOption"><label><input type="radio"> Store operations / Point-of-sale</label></li>
+            <li><label><input type="radio"> Customer Relationship Management</label></li>
+            <li><label><input type="radio"> Corporate administration</label></li>
+        </ol>
+        <input type="button" value="Done">
+        <span class="feedback"></span>
+        <p class="explain"></p>
+    </div>
+	
+    <h3 class="breakprinthere">2.1 - Typical Analytics Journey</h3>
+    <p>The diagram below shows how an analytics journey typically happen in retail (from left to right).</p>
+    <img src="content_assets/img/img3_2.jpg">
+    
+	<ol>
+		<li>The first set of analytics retailers normally do are based on <strong>Store Operations</strong> or the <strong>Point-of-Sale analytics</strong> (in green).</li>
+		<li>Then, retailers move on to <strong>supply chain</strong> and <strong>merchandising</strong> (in light blue).</li>
+		<li>You’ll find that the <strong>customer relationship management or CRM</strong> comes later.</li>
+		<li>Followed by areas in <strong>corporate administration</strong>, such as Human Resource Intelligence (in darker blue).</li>
+	</ol>
+    
+    <h4 class="breakprinthere">CRM versus POS</h4>
+    <fieldset>
+		<legend>Question</legend>
+		<p>But why does Customer Relationship Management (CRM) come after POS in a typical analytics journey? Shouldn’t we focus on the customers first?</p>
+		<p class="instructions">Click the button for an explanation after you have come up with your own.</p>
+		<button class="p3_clickshowBTN" onClick="showExplanation(this)">Show explanation</button>
+		<div class="p3_clickshow">
+			<div>
+			<p><strong>Explanation</strong></p>
+			<p>The CRM scope is to establish, grow, and retain the organization–customer relationship. The brick-and-mortar retailers do not have the means to identify all their customers to build a one-to-one relationship. Purchase data collected at point of sales (POS) can be used to summarize customer spending habits, and with loyalty and rewards programs, specific customers can be then identified. Thereafter, CRM will make better sense. However, in e-Commerce, CRM is likely to be the first step as customers cannot order without giving their details.</p>
+			</div>
+		</div>
+    </fieldset>
+    <p><strong>Further Reading</strong></p>
+	<ul>
+	  <li><a href="http://www.manishabraham.com/documents/controlling" target="_blank">BSC Example – Tesco Strategy Map and Scorecard</a></li></ul>
+<br>
+
+	<h3 class="breakprinthere">2.2 - Online versus Brick-and-mortar</h3>
+	<fieldset>
+		<legend>Question</legend>
+		<p>Now, think about e-Commerce/online retail vs brick-and-mortar retail store. What is one main key difference between them from an analytics perspective?</p>
+		<p class="instructions">Click the button to read about some possible differences after you have come up with your own.</p>
+		<button class="p3_clickshowBTN" onClick="showExplanation(this)">Show explanation</button>
+		<div class="p3_clickshow">
+			<div>
+			<p><strong>Explanation</strong></p>
+			<p>This question expands on the earlier question of CRM versus POS.<br><br>
+			Brick-and-mortar retailers implement loyalty and rewards programs in order to identify and collect customer data during purchases.<br><br>
+			Another perspective: In an e-Commerce/online retail outfit, data can be collected whenever a potential customer browses their website, through the click-through. In a brick-and-mortar retail store, this is not so. There is no means to capture browsing habits of the window shopper. For example: How long did he/she stay and browse at one item?<br><br>
+			Brick-and-mortar retailers leverage technologies like video analytics, WIFI tracking, eye ball tracking to get insights on what customers do inside the physical store.</p>
+			</div>
+		</div>
+    </fieldset>
+
+	<h4 class="breakprinthere">Future of retail</h4>
+	<fieldset>
+		<legend>Question</legend>
+		<p>Is the future of retail completely online?</p>
+		<p class="instructions">Click the button for an explanation after you have come up with your own.</p>
+		<button class="p3_clickshowBTN" onClick="showExplanation(this)">Show explanation</button>
+		<div class="p3_clickshow" id="p3_imageHolder3">
+			<div>
+				<p><strong>Explanation</strong></p>
+				<p>Amazon has since opened its first brick and mortar extension – a bookstore in Seattle’s University Village. Increasingly, there is a trend towards “Omni-channel” retailing to provide customers a seamless experience from offline to online, and from device to device. “Omni-channel” customers are also said to spend more. See infographics below.</p>
+				<p>Hence, e-Commerce/online retail and brick-and-mortar retail store are not mutually exclusive.</p>
+			</div>
+			<figure>
+			<img src="content_assets/img/img3_3.png">
+			<figcaption class="source" style="text-align: center">SOURCE: <a href="http://www.retailtouchpoints.com/resources/type/infographics/retail-vs-e-commerce-trends-a-match-made-in-heaven" target="_blank">retailtouchpoints.com</a></figcaption>
+			</figure>
+		</div>
+    </fieldset>
+	
+	<h3 class="References"><span>📑 </span> References</h3>
+	<div class="References">
+	<ul><li><a href="https://www.theguardian.com/business/2016/jan/30/future-of-e-commerce-bricks-and-mortar" target="_blank">The future of e-commerce: bricks and mortar</a></li></ul>
+	</div>
+
+
+	<script src="content_assets/frameworks/JS/smu_MCQ_SCORM.js"></script>
+</body>
+</html>

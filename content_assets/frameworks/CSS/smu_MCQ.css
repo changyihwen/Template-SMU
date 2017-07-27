@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MCQ {
+	/*background-color:#ECECEC; border-top:3px solid rgba(50,150,255,1.00); padding:0.1em 2em 2em;*/
+	margin-bottom:4em;	}
+.MCQ .qn{
+	text-indent: -1em; margin-left:1em; }
+.MCQ input[type=button]{
+	padding:.7em 1em; border-radius:10px; cursor:pointer; background:linear-gradient(#494949 45%, black 55%); color:white; font-weight:bold; font-size:.9em; letter-spacing:.4px; display:none; }
+.MCQ input[type=radio]{
+	margin-right:.5em; }
+.MCQ>.feedback{
+	font-weight:bold;	}
+.MCQ>.explain{
+	padding:.5em 1em; background-color:#D8E4F1; display:none; border-radius:5px; margin-bottom:0;	}
+.MCQ>ol>li{
+	padding-left: 1.5em; text-indent:-1em; 	}
+.MCQ>ol>li> label{
+	cursor:pointer	}
+	
+#QuizComplete		{ /**/display:none; background-color:#c7e56e; border-radius: 10px }
+#QuizComplete p		{ padding:15px;}
+/*#QuizComplete input	{ cursor:pointer; }*/
+
+@media print {
+	.MCQ .correctOption { background-color:rgb(170,235,170); }
+	.MCQ>ol>li 			{ padding-left:0; text-indent:0;	}
+	.MCQ>ol>li>label>input[type="radio"] 	{ display:none; }
+}

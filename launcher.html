@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>B111_Introduction to Analytics in Retail</title>
+
+<link rel="stylesheet" href="interface_assets/frameworks/CSS/smu_launcher.css">
+<link rel="stylesheet" href="content_assets/frameworks/CSS/module.css">
+
+<script src="interface_assets/frameworks/SCORM/SCORM_API_wrapper.js"></script>
+<script src="interface_assets/frameworks/JS/jquery-2.2.3.min.js"></script>
+<script src="interface_assets/frameworks/JS/smu_launcher.js"></script>
+
+</head>
+
+<body>
+	<!-- <p id="counter" style="background:black; color:white; position:absolute; bottom:0; padding:10px">0</p> -->
+	<div id="wrapper">
+		<div id="courseLengthGetter"></div>
+		<h2>My Learning Dashboard</h2>
+		<div id="piechartHolder">
+			<div id="completionPie">
+				<canvas id='progressCanvas' width="250px" height="250px">
+				</canvas>
+				<!-- <div style=""> -->
+				<!-- <h3 style="margin-top:-160px">Progress</h3> -->
+				<p id="completionStat">Progress: <span class="stats">0 %</span></p>				
+				<p id="courseStat"><!-- Status:  --><span class="stats">Incomplete</span></p>
+				<!-- </div> -->
+				
+				
+			</div>
+			<div id="successPie">
+				<canvas id='scoreCanvas' width="250px" height="250px">					
+				</canvas>		
+				<!-- <h3>Score</h3> -->
+				<p id="scoreStat">Score: <span class="stats">0 %</span></p>
+				<p id="successStat"><!-- Result:  --><span class="stats">Unattempted</span></p>
+			</div>
+		</div>
+
+		<p id="remarksStat"></p>
+
+		<button id="restartbtn" type="button" onClick="fnrestart();">Start Unit</button>
+		<button id="continuebtn" type="button" onClick="fnpopup();">Continue from last location</button>
+		<button id="printbtn" type="button" onClick="printcheck();">Print Unit</button>
+	</div>
+
+	<div id="print">
+		<img id="logo" src="interface_assets/img/SMU_logo.svg" />
+		<h3 id="courseTitle"></h3>
+	</div>
+</body>
+</html>

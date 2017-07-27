@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Retail Ecosystem</title>
+<style>
+	#p2_imgHolder img 			{ border:none; width:100%;	}
+	#p2_imgHolder div			{ width:calc(100% - 40px); background:rgba(0,0,0,.85); padding:20px; color:white; }
+	#p2_imgHolder div.lightBlue { color:#88C6D5; }
+
+	div#p2_responsiveImageMap				{ max-width: 820px; margin:0; position:relative; }
+	div#p2_responsiveImageMap #imgHolder	{ position:relative }
+	div#p2_responsiveImageMap img 			{ width:100%; margin:0;   }
+	div#p2_responsiveImageMap .btn 			{ height:10px; width:10px; border-radius:50px;  margin:0; position:absolute; cursor:pointer; transform: translate(-50%, -50%); text-align: center; background:white; border:5px solid #0e3961; }	
+	div#p2_responsiveImageMap #btn0 		{ left:18.8%; top:10.7%; 	}
+	div#p2_responsiveImageMap #btn1 		{ left:24.9%; top:66.7%; 	}
+	div#p2_responsiveImageMap #btn2 		{ left:46.6%; top:37.7%; 	}
+	div#p2_responsiveImageMap #btn3 		{ left:37.6%; top:88%; 		}
+	div#p2_responsiveImageMap #btn4 		{ left:81%; top:12%; 		}
+	div#p2_responsiveImageMap #btn5 		{ left:81.2%; top:68.7%; 	}
+
+
+	.info 		{ background:linear-gradient(white,#f7edaf); width:100%; min-height:100%; position:absolute; padding:10px 20px; z-index:1; box-sizing: border-box; margin-bottom:80px; display:none; outline:2px solid #b27f11;}
+	.info span 	{ font-size: 1.2em; cursor:pointer; position:absolute; right:20px; }
+	
+
+	@media screen and (min-width:680px) {
+		.info				{ width:35%; margin-bottom:auto; }
+		.info:nth-child(1),
+		.info:nth-child(2)	{ right:0; }
+		.info span 	{ position:static;  }
+	}
+	@media screen and (min-width:1035px) {
+		#p2_imgHolder div				{ width:38%; min-width:200px; max-width:360px; background:rgba(0,0,0,.65); padding:15px; z-index:0; position:absolute; margin:10px; }
+		#p2_imgHolder div p 			{ line-height:30px; }
+		div#p2_responsiveImageMap .btn 	{ border:8px solid #0e3961; }
+	}
+
+	@media print{
+		.infoHolder 					{ display:flex; justify-content:space-between; }
+		.info 							{ display:block; /*width:40%; height:230px; float:left;*/ margin:10px; }
+		.info span, 
+		div#p2_responsiveImageMap .btn 	{ display:none;	}
+	}
+
+	
+</style>
+</head>
+
+<body>
+    <h2>1 - Retail Ecosystem</h2>
+
+    <div id="p2_imgHolder">
+		<div>
+			<p style="margin:0">Retailing is the set of activities that markets <span class="lightBlue">products</span> and <span class="lightBlue">services</span> to <span class="lightBlue">final consumers</span> for their own personal or household use.</p><br>      
+			<p style="margin:0">It does this by organizing their availability on a relatively large scale and supplying them to consumers on a relatively small scale.</p><br>
+			<p class="source">SOURCE: <a href="http://search.library.smu.edu.sg/SMU:Everything:SMU_ALMA2137737140002601" target="_blank" style="color:#669AD0">Retailing: environmen &#38; operations</a> (pages 12 – 15)</p>
+		</div>
+		<img src="content_assets/img/img2_1.jpg" />
+		
+	</div>
+      
+
+   
+    <p>To make retailing possible, an ecosystem of various participants is needed.</p>
+
+<br>
+
+	<h3 class="breakprinthere">1.1 - Relationships in the Retail Ecosystem</h3>
+	<p>The figure here shows a typical <strong>retail ecosystem</strong>. A retail ecosystem describes the relationships between the various actors as shown below.</p>
+
+	<div id="p2_responsiveImageMap">
+		<div class="info">
+			<span>✖</span>
+			<h3>Supplier</h3>
+			<p>The <strong>Supplier</strong> provides supplies to the Retailer directly or via the Logistics Provider.</p>
+		</div>
+		<div class="info">
+			<span>✖</span>
+			<h3>Logistics Provider</h3>
+			<p>The <strong>Logistics Provider</strong> will take care of transporting the supply of goods from the Supplier to the Retailer, and from the Retailer to the Consumer.</p>			
+		</div>
+		<div class="info">
+			<span>✖</span>
+			<h3>Retailer</h3>
+			<p>The <strong>Retailer</strong> procures from the Supplier, and sells it to the Consumer.</p>
+		</div>
+		<div class="info">
+			<span>✖</span>
+			<h3>Consumer</h3>
+			<p>The <strong>Consumer</strong> buys products and services from the Retailer.</p>
+		</div>
+		<div class="info">
+			<span>✖</span>
+			<h3>Regulator</h3>
+			<p>The <strong>Regulator</strong> ensures that all products and services are provided according to existing rules and regulations.</p>
+		</div>
+		<div class="info">
+			<span>✖</span>
+			<h3>Finance Provider</h3>
+			<p>The <strong>Finance Provider</strong> can finance both the Retailer and Consumer. For e.g., the Consumer can buy on credit, say, interest-free with a credit card.</p>
+		</div>		
+		<div id="imgHolder" style=" position:relative">
+			<p class="btn" id="btn0"></p>
+			<p class="btn" id="btn1"></p>
+			<p class="btn" id="btn2"></p>
+			<p class="btn" id="btn3"></p>
+			<p class="btn" id="btn4"></p>
+			<p class="btn" id="btn5"></p>
+			<img src="content_assets/img/img2_2.jpg"  style="border:none"/>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	$('#imgHolder img').click(function(){
+		$('.info').fadeOut();
+	});
+	$('.btn').click(function(){
+		$('.info').fadeOut('fast');
+		var index = $(this).index();
+		$('.info:eq('+index+')').show('fast');
+	});
+	$('.info span').click(function(){
+		$(this).parent().fadeOut();
+	});
+</script>
+</html>

@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:rgba(250,250,250,1); margin:0 auto; font-family:Calibri, sans-serif; 	}
+
+#wrapper 		{ text-align: center; }
+#wrapper h2		{ padding:5px 0; margin-bottom:0px; }
+#wrapper button	{ padding:.5em .8em; border-radius:.3em; margin:1em .5em; color:white; background:linear-gradient(#777777,#444444,#000000); font-weight: bold; }
+
+#piechartHolder					{ text-align: center; }
+#piechartHolder #completionPie,
+#piechartHolder #successPie		{  margin-bottom:120px;	}
+#piechartHolder canvas			{ max-width:240px; width:100%; position:relative; z-index:-1;  }
+#piechartHolder p 				{ font-size: 1.1em; margin:0; }
+#piechartHolder .stats			{ font-weight:bold; }
+#piechartHolder #completionStat,
+#piechartHolder #scoreStat 		{ margin-top:-140px }
+
+#remarksStat	{ clear:both; }
+.green 			{ color:green; }
+.red 			{ color:red; }
+
+#courseLengthGetter,
+#print{ display:none; }
+
+@media screen and (min-width: 620px) {
+	body 							{ padding:0 20px; max-width: 820px; }
+	#wrapper button					{ margin-top:40px; }
+	#piechartHolder					{ max-width:600px; margin:0 auto;  	}
+	#piechartHolder #completionPie	{ float:left; }
+	#piechartHolder #successPie		{ float:right; }
+	#piechartHolder canvas			{ margin:20px auto; display:block; }
+	#piechartHolder h3,
+	#piechartHolder p 				{ text-align:center; }
+	#piechartHolder #completionStat,
+	#piechartHolder #scoreStat 		{ margin-top:-160px; }
+}
+
+
+@media print{
+	#wrapper 				{ display:none; }
+	body 					{ background:none; }
+	#print 					{ display:block; width:97%; height:auto; font-size:1.2em;   }	
+	#print #logo 			{ height:120px; margin:0 auto; display:block; }	
+	#print #courseTitle 	{ text-align:center; font-size: 2em; padding-bottom:5px; margin-top:0; border-bottom:3px solid #042459; }
+	#print img 				{ max-width: 100%; margin-left:1px; }
+	#print>div 				{ page-break-after:always; }
+	#print>div>h2 			{ font-size:1.6em;	color:#900;	margin:.5em 0 1em; }
+	#print>div:last-child 	{ page-break-after: auto;	}	
+	#print p,
+	#print li 				{ line-height:1.6em; }
+}

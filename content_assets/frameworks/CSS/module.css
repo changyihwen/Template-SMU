@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content .mycomment{ border:1px solid red; padding:1em; color:red; font-weight: bold; }
+
+/* ---------- common styles used for all courses ---------- */
+.content{ /*border:1px solid red;*/	}
+.content img { border:4px solid #DDDDDD; width:98%;  }
+.content .instructions { font-size:.9em; font-style:italic; color:#565656; 	}
+.content .source { word-break:break-all; font-size:.8em; font-style: italic; margin:0 0 1em;  }
+.content .youtubeHolder { position:relative; padding-bottom: 56.25%; padding-top: 25px; width:100%; height:auto; margin:0 auto; display:block; }
+.content .watchVideoAt { display:none; }
+
+h3.LearningObjectives{
+	font-size:1.2em; background:linear-gradient(#F4F4F4 0%, #3B7092 8%, #15425F, #042032 96%);color:white; padding:.2em .4em; margin-bottom:0; border-bottom:3px solid #454D52;	}
+div.LearningObjectives{
+	border-bottom:2px solid #1F4F6E; padding:1px 20px; }
+h3.References{
+	font-size:1.2em; background:linear-gradient(#F4F4F4 0%, #46923B 8%, #215F14, #0A3203 96%);color:white; padding:.2em .4em; margin-bottom:0; border-bottom:3px solid #475245;	}
+div.References{
+	border-bottom:2px solid #2C6E1E; padding:1px 20px; }
+h3.Summary{
+	font-size:1.2em; background:linear-gradient(#F4F4F4 0%, #643B92 8%, #3A135F, #190332 96%);color:white; padding:.2em .4em; margin-bottom:0; border-bottom:3px solid #4C4552;	}
+div.Summary{
+	border-bottom:2px solid #461E6E; padding:1px 20px; }
+h3.LearningObjectives span,
+h3.References span,
+h3.Summary span{
+	font-size:1.5em; 	}
+
+
+@media print{
+	.breakprinthere { page-break-before:always; }
+	.watchVideoAt { display:inline; }
+	.instructions,
+	.explain,
+	button,
+	.youtubeHolder	{ display:none; }
+
+
+	/*--- only for this unit ---*/
+	#print .p4_accordionBTN span	{ display:none; }
+	#print .p3_clickshow,
+	#print .p4_accordion,
+	#print .p5_clickshow,
+	#print .p5_clickshow { display:block; }	
+
+	#print legend	{ background-color:white; }
+	#print table.thisTable { border:1px solid #FFC534; }
+}

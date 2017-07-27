@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Industry Standard Data Model</title>
+	<style>
+		fieldset{
+			margin:1em 0 2em; padding:0 25px; border:2px solid #85B5D0; background: linear-gradient(0deg, #D8DDE8, rgba(244,244,244,0) 90%); }
+		legend {
+			margin-left:5px; padding:0 10px; font-weight:bold; font-size:1.2rem; background-color:#F4F4F4; color: #1169C5;	}
+		legend::first-letter {
+			font-size:2.6rem;	 }
+		.p5_clickshow {
+			display:none; background:rgba(255,255,255,0.4); padding:.1em 1.2em; border:1px solid rgba(224,233,241,1); margin-bottom:2em;	}
+		.p5_clickshowBTN {
+			width:200px; padding:.7em 1em; border-radius:10px; cursor:pointer; background:linear-gradient(#494949 45%, black 55%); color:white; font-weight:bold; font-size:.9em; letter-spacing:.4px; margin-bottom:2em;	}
+		
+		.p5_tableHolder{ overflow-x:auto; margin-bottom:30px; }
+		.thatTable {width:100%; border:1px solid white; }
+		table.thatTable {margin-bottom:.5em }
+		.thatTable tr{background-color: #D9E3F1}
+		.thatTable tr:nth-child(odd){background-color: #B0C6E8}
+		.thatTable tr td{padding:10px}
+	</style>
+	<script>
+		function showExplanation(e){
+			$(e).next('.p5_clickshow').fadeIn();
+			$(e).hide();
+			$(e).prev('.instructions').hide();
+		}
+	</script>
+</head>
+
+<body>
+	<h2>4 - Industry Standard Data Model</h2>
+	
+	<p>Let’s look at the benefits of using an industry standard data model as a reference for retailers to build their own models. We’ll go in depth into an industry standard data model that retailers and their vendors use to create their own data warehouses.</p>
+	
+	<fieldset>
+		<legend>Need for an Industry Standard Data Model</legend>
+		<p>From the analytics perspective, we typically create data models (conceptual/logical/physical) before analytics is performed. But do we need to create the model from scratch every time?</p>
+		<p class="instructions">Click the button for an explanation after you have come up with your own.</p>
+		<button class="p5_clickshowBTN" onClick="showExplanation(this)">Show explanation</button>
+		<div class="p5_clickshow">
+			<p><strong>Explanation</strong></p>
+			<p><strong>No, we do not need to.</strong> In certain industries, you do have access to a reference data warehouse model to jump start the process.</p>
+			<p><strong>Why do we need to look for an industry model?</strong><br>
+			<em>We look for an industry model to leverage on the industry’s best practices and benchmarks, and so one does not have to reinvent the wheel every time. With benchmarks, we can also compare our KPIs & Metrics with that of competitors.</em></p>
+		</div>
+    </fieldset><br>
+
+<h3 class="breakprinthere">4.1 - The ARTS Data Warehouse Model</h3>
+<h4>What is an example of an industry model for retail? </h4>
+	<p>The ARTS data warehouse is a reference model that retailers and their vendors can use to create their own data warehouses.</p>
+	<p>Some subject areas include:</p>
+	<div class="p5_tableHolder">
+	<table class="thatTable" border="1">
+		<tr>
+			<td>Merchandise flow management</td>
+			<td>Store administration/operations</td>
+		</tr>
+		<tr>
+			<td>Inventory management</td>
+			<td>Customer relationship management</td>
+		</tr>
+		<tr>
+			<td>Item and price maintenance</td>
+			<td>Sales and productivity reporting</td>
+		</tr>
+		<tr>
+			<td>Point of sale processing</td>
+			<td>Ordering</td>
+		</tr>
+		<tr>
+			<td>Tender control	Workforce</td>
+			<td>Management</td>
+		</tr>
+	</table>
+	</div>
+	<p class="source" style="text-align: right">SOURCE: National Retail Federation, IT Standards Division: ARTS</p>
+
+	<p>Read more about the <a href="https://nrf.com/arts-data-warehouse-model" target="_blank">ARTS data warehouse model</a>.</p> 
+	<p>Watch a video below on ARTS<span class="watchVideoAt"> at <a href>https://www.youtube.com/watch?v=G_dF_8vF1Hs&feature=youtube</a></span>.</p>
+	<div class="youtubeHolder">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/G_dF_8vF1Hs?rel=0" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%;height:100%;"></iframe>
+	</div>
+	
+</body>
+</html>

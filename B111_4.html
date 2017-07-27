@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Areas of Analytics in Retail</title>
+<link rel="stylesheet" href="content_assets/frameworks/CSS/smu_RolloverTab.css">
+<style>
+	h4.p4_accordionBTN {
+		background-color:#405329; padding:10px; cursor:pointer; color:white; margin:5px 0}
+	h4.p4_accordionBTN span{
+		float:right; transition:transform .3s, color .3s;	}
+	.p4_accordion{
+		display:none; padding:0 15px;	}
+
+	.p4_tableHolder{
+	 	overflow-x:auto; margin-bottom:30px;	}
+	table.thisTable{
+		text-align: left; margin-bottom:0;  }
+	.thisTable tr{
+		background-color:#FFEDC3; border:1px solid #FFC534; 	}
+	.thisTable tr:nth-child(odd){
+		background-color:white;		}
+	.thisTable tr:first-child{
+		background-color:#FFC534;		}
+	.thisTable tr td,
+	.thisTable tr th{		
+		padding:10px;	}
+	
+	.rotateElement{
+		color:red; transform: rotate(45deg); }
+</style>
+</head>
+
+<body>
+   
+    <h2>3 - Areas of Analytics in Retail</h2>
+    
+    <p>Let’s go deeper into 5 of the areas in an analytics journey. For each area, we will learn about some analytics that are likely to be done in a retailer problem.</p>
+    <img src="content_assets/img/img4_1.png" />
+    <br>
+
+	<h3 class="breakprinthere">3.1 - Areas to measure in an analytics journey</h3>
+	
+	<h4 class="p4_accordionBTN"><span>✚</span>Market Basket Analysis</h4>
+	<div class="p4_accordion">
+		<img src="content_assets/img/img4_2.png" style="max-width:258px; float:right; margin-left:20px"/>
+		<p>Let’s say your goal is to increase the basket size, in other words, the amount of items bought by customers in one shopping trip. What areas of analytics would you measure?<br><br>
+Here are some possible questions and areas of analytics you could measure:</p>
+
+		<p style="clear:both; text-align: center; margin:0 0 5px 0;"><strong>Goal:</strong> Monitor Buying Patterns, Increase basket size</p>
+		<div class="p4_tableHolder">
+			<table class="thisTable">
+				<tr>
+					<th>Analytics</th>
+					<th>Description</th>
+					<th>Possible Question</th>
+				</tr>
+				<tr>
+					<th>In basket items</th>
+					<td>Items that are part of a typical basket</td>
+					<td>What items are typically bought by which cluster/ profile?</td>
+				</tr>
+				<tr>
+					<th>Attachment Rates</th>
+					<td>Analysis of what products are bought along with a base item.</td>
+					<td>Are windows cleaning products purchased when detergents are purchased?</td>
+				</tr>
+				<tr>
+					<th>Brand switching</th>
+					<td>Analysis of what alternate brands would be bought by customer if the attachment brand is not available</td>
+					<td>If Coke is not available, does the customer buy Pepsi?</td>
+				</tr>
+				<tr>
+					<th>Demographic basket</th>
+					<td>Analysis of typical basket of items bought by specific demographic group</td>
+					<td>How are the demographics of the neighbourhood affecting what customers are buying?</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<h4 class="p4_accordionBTN breakprinthere"><span>✚</span>Category management</h4>
+	<div class="p4_accordion">
+		<p>If your goal is to manage assortment of your items effectively, what areas of analytics would you measure?</p>
+		<p style="text-align: center; margin:0; margin-bottom:5px"><strong>Goal:</strong> Manage assortment effectively</p>
+		<div class="p4_tableHolder">
+			<table class="thisTable">
+				<tr>
+					<th>Analytics</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<th><span class="masterTooltip" title="SKU stands for Stock Keeping Unit. It is a unique number assigned to a product by a retail store to identify the merchandise, and its attributes such as price, and manufacturer.">SKU Rationalization</span></th>
+					<td>Analysis of items to decide on which SKUs to store to maximize sales. SKU rationalization is a method for selecting, listing, and placing key products on the shelf.</td>
+				</tr>
+				<tr>
+					<th>Share of Shelf</th>
+					<td>Analysis of share of display shelf and the impact on sales for a category</td>
+				</tr>
+				<tr>
+					<th><span class="masterTooltip" title="Assortment is the different types of products that a retailer offers for sale">Assortment Optimization</span></th>
+					<td>Analysis to optimize the assortment of items in a category</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<h4 class="p4_accordionBTN breakprinthere"><span>✚</span>Inventory Intelligence</h4>
+	<div class="p4_accordion">
+		<p>To determine how well you have reduced out of stocks, or streamlined your inventory, you can measure these analytics:</p>
+		<p style="text-align: center; margin:0; margin-bottom:5px"><strong>Goal:</strong> Reduce Out of Stocks, Streamline Inventory</p>
+		<div class="p4_tableHolder">
+			<table class="thisTable">
+				<tr>
+					<th>Analytics</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<th>Weeks of Supply</th>
+					<td>How long will the current stock on hand last based on current projected demand</td>
+				</tr>
+				<tr>
+					<th>Sell Through</th>
+					<td>Indicator of sales velocity. Analysis of how much was sold versus the inventory</td>
+				</tr>
+				<tr>
+					<th>Pull Through</th>
+					<td>Analysis of what other products are sold because the stores carry a specific product</td>
+				</tr>
+				<tr>
+					<th><span class="masterTooltip" title="GMROI is calculated as gross margin / average inventory">GMROI</span> or Gross Margin Return on (Inventory) Investment</th>
+					<td>Analysis of sales for every dollar of inventory; used to identify which products are most cost effective to store</td>
+				</tr>
+				<tr>
+					<th>Inventory Turns</th>
+					<td>Analysis of which products are fast moving</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<h4 class="p4_accordionBTN breakprinthere"><span>✚</span>Customer Analytics</h4>
+	<div class="p4_accordion">
+		<p>A business would want to keep its best and most valuable customers. What are some analytics if you want to measure this?</p>
+		<p style="text-align: center; margin:0; margin-bottom:5px"><strong>Goal:</strong> Keep best customers, Increase share of wallet</p>
+		<div class="p4_tableHolder">
+			<table class="thisTable">
+				<tr>
+					<th>Analytics</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<th>Share of wallet</th>
+					<td>Share of wallet is the current spend at household level versus the potential spend</td>
+				</tr>
+				<tr>
+					<th>Segmentation</th>
+					<td>Group customers with similar characteristics – e.g. buying behavior</td>
+				</tr>
+				<tr>
+					<th>Target Marketing</th>
+					<td>Identify right customer segments for marketing a product or offer</td>
+				</tr>
+				<tr>
+					<th>Campaign Analysis</th>
+					<td>Analysis of results of campaign to determine whether it worked or not</td>
+				</tr>
+				<tr>
+					<th>Customer Profiling</th>
+					<td>Characteristics of customer who exhibited same behavior</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<h4 class="p4_accordionBTN breakprinthere"><span>✚</span>Marketing Analytics</h4>
+	<div class="p4_accordion">
+		<p>How do you know if your marketing efforts or promotions are achieving their targeted return on investment?</p>
+		<p style="text-align: center; margin:0; margin-bottom:5px"><strong>Goal:</strong> Manage promotions, Achieve Marketing Return On Investment (MROI)</p>
+		<div class="p4_tableHolder">
+			<table class="thisTable">
+				<tr>
+					<th>Analytics</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<th>Promo Lift</th>
+					<td>Increase in sales due to a promotion</td>
+				</tr>
+				<tr>
+					<th>Price Points</th>
+					<td>Analysis of price points and corresponding sales, at what price points sales go up and profitable to retailer</td>
+				</tr>
+				<tr>
+					<th>Channel Analysis</th>
+					<td>Analyze promotion by channel and its effectiveness</td>
+				</tr>
+				<tr>
+					<th>Display Analysis</th>
+					<td>In-store, aisle and other promotions and results</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+
+<script src="content_assets/frameworks/JS/smu_RolloverTab.js"></script>
+<script>
+	var tar;
+	$('.p4_accordionBTN').click(function(){
+		if($(this).index('.p4_accordionBTN') !== tar){
+			$('.p4_accordion').slideUp();
+			$('.p4_accordionBTN span').removeClass('rotateElement');
+		}
+		tar = $(this).index('.p4_accordionBTN')
+		$('.p4_accordion:eq('+tar+')').slideToggle();//.slideDown();
+		$(this).children('span').toggleClass('rotateElement');
+	});
+</script>
+
+</html>

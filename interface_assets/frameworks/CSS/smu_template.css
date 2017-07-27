@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- Everything below are styles for User Interface ---------- */
+html,
+body 	{ /*height:100%; width:100%;*/  }
+*		{ margin:0; padding:0; font-family:Calibri, sans-serif;}
+body 	{ background-color:#F4F4F4; font-size:18px; overflow-x:hidden; min-width:260px; position:relative;}
+header #logo,
+#menuBar,
+nav,
+footer 	{ -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+
+header			{ background: #151C55 url(../../img/SMU_BackDrop_Light.svg) no-repeat -140px -160px; color:white; background-size:2000px;	min-height:78px; }
+header #logo	{ background:white url(../../img/SMU_logo.svg) no-repeat center; height:89px; text-align:center; }
+header h3		{ font-size:1.8em; padding:14px 20px 20px; }
+
+
+/*----------------------------------------------------------- 
+  ---------- MenuBar only supported in Mobile Version ---------- 
+  -----------------------------------------------------------*/
+#menuBar					{ background: linear-gradient(#555, #222); height:40px; color:white; font-size:1.125em; width:100%; text-align:right; display:flex; justify-content: space-between; position:sticky; position:-webkit-sticky; top:0; }
+#menuBar p 					{ cursor:pointer; }
+#menuBar div p 				{ display:inline-block; margin:5px 35px; }
+#menuBar p:first-child 		{ margin:0; }
+#menuBar p:first-child span	{ margin:0 .3rem 0 1.5rem; font-size:1.6rem; display:inline-block; transform:scale(1.5,1); }
+
+#progress 		{ height:6px; width:100%; background:#777777; border-bottom:2px solid #666666; /*z-index:40;*/ position:sticky; position:-webkit-sticky; top:40px; }
+#progress #bar	{ height:6px; background:linear-gradient(#b7b524,#d1cf4d,#84830f); position:absolute; transition: width ease-out .8s; }
+
+
+/*#menuBar { position:relative; transition:top ease-out .5s; }
+#progress { position:relative; transition:top ease-out .5s; }*/
+
+main { margin-bottom:100px; display:flex; flex-direction: column; }
+
+/*-- make menuBar float when scrolling (mobile mode)--*/
+/*.fixedMenuBar 		{ position:fixed; top:0; z-index:40; min-width:260px; }*/
+/*-- add marginTop to cater for space when menuBar is floating while scrolling (mobile mode)--*/
+/*.fixedMain			{ margin-top:48px; }*/
+/*-- disable font-size button (mobile mode) --*/
+.txtSize_disabled	{ opacity:.4; cursor:default; }
+/*.fixedProgress		{ position:fixed; top:40px; }*/
+
+
+nav 		{ padding:20px 10px; /*display:none;*/ }
+nav ul 		{ list-style:none; }
+nav li 		{ color:#7F7F7F; }
+	
+nav #TOC,
+nav #notePad,
+nav #Icons 		{ flex-flow: column; }
+
+nav #TOC 	{ /*margin:20px 10px;*/ }
+nav #TOC li { margin-bottom:25px; /*change to adjust spacing between TOC links*/
+	border-radius:10px 0 0 10px; padding:5px 5px 5px 10px; display:flex; justify-content:space-between; border-bottom:solid 1px #CCCCCC; }
+nav #TOC li:hover	{ color:#36F; font-weight:bold; cursor:pointer; }
+nav #TOC > li 		{ font-weight:bold; text-decoration:none; }
+nav #TOC ul 		{ margin-left:25px;	display:block; }
+
+nav #TOC::-webkit-scrollbar 			{ width: 6px; height:100px; }
+nav #TOC::-webkit-scrollbar-track 		{ border-left: 1px solid #ccc; border-radius:8px; }
+nav #TOC::-webkit-scrollbar-thumb 		{ background:linear-gradient(to left, #AAAAAA, #D4D4D4, #EDEDED);/*background-color: #58B9CD;*/ border-radius:8px}
+nav #TOC::-webkit-scrollbar-thumb:hover { background:linear-gradient(to left, #727272, #AFAFAF, #D4D4D4);/*background-color: #2E848F;*/}	
+/*
+nav #Icons		{ background-color:#E8E8E8 }*/
+
+
+
+.hideNav		{ display:none}
+.incompleteMark	{ color:#7F7F7F; font-weight:normal; font-size:.7em; margin:4px 0 5px 12px; }
+.completeMark	{ color:green; font-weight:bold; font-size:1em; margin:0; margin-left:12px; }
+/*--Class used to change color of selected item in TOC--*/
+.selectedPage 	{ color:#0B6CD1; font-weight:bold; border-bottom:solid 4px #5FC1FF;  }
+
+/*--Class used to change background color of selected item in TOC--
+.selectedPageBG{ border-bottom:solid 4px #5FC1FF; }*/
+
+article.content 	{ padding:15px; transition: padding-left ease .7s; /*position:relative;*/ }
+print	{ display:none; }
+
+.content h1			{ font-size:3em; font-weight:bold; text-align:center; margin:5em 0; }
+.content h2			{ font-size:1.6em; color:#900; margin:.5em 0 1em; }
+.content h3			{ font-size:1.2em; color:#5F0001; margin:1em 0; padding:5px 0; }
+.content h4			{ font-size:1.125em; font-weight:bold; margin:1em 0; color:#925406; }
+.content p,
+.content li 		{ margin:1.5em 0; line-height:30px; }
+.content ul, 
+.content ol 		{ margin-left:30px; }
+.content li 		{ padding-left:10px; }
+.content table 		{ border-collapse:collapse; width:100%; }
+.content table th,
+.content table td 	{ padding:3px; vertical-align:top; }
+.content input,
+.content select		{ padding:0 5px; }
+.content button		{ font-size:.9em; cursor:pointer; }
+.content img 		{ height:auto; display:block; margin:0 auto; }
+.content video		{ display:block; margin:20px auto 0; width: 32em; height: 18em; max-width: 100%; max-height: 100%; outline:1px solid #CCC; }
+
+footer 					{ background:linear-gradient(rgba(244, 244, 244, 0), rgba(244, 244, 244, 1) 60% ); color:#636363; display:flex; justify-content: space-between; z-index:20; padding:0 .6em; position:fixed; bottom:0; width:calc(100% - 20px); min-width:240px; padding-top:20px; }
+footer p 				{ font-size:2.4em; cursor:pointer;  }
+footer p:hover			{ color:#36F; }
+footer p:first-child 	{ transform:scaleX(-1); }
+footer p:nth-child(2)	{ font-size:.9em; font-weight:bold; margin-top:25px; }
+
+
+/*---------------For Desktop---------------*/
+@media screen and (min-width: 770px) {
+
+	header 			{ position:relative; /*z-index:40;*/ display:flex }
+	header #logo 	{ width:140px; height:71px; border-radius:0 0 20px 20px; margin-left:30px; }
+	header h3 		{ white-space:nowrap; }	
+
+	#menuBar					{ display:none; }
+	#progress 					{ z-index:40; top:0;}
+	/*.relativeDesktopProgress	{ position:relative;  }
+	.fixedDesktopProgress		{ position:fixed; top:0; }*/
+
+	main { margin-bottom:inherit; flex-direction:row; }
+
+	nav { background-color:white; padding:0; display:flex; justify-content:flex-end; position:sticky; position:-webkit-sticky; top:8px; height:calc(100vh - 8px);/*z-index:30;*/}
+
+	/*--scroll bar for TOC when it gets too long (desktop version)--*/
+	nav #TOC { overflow:auto; width:230px; right:60px; padding:25px 0 0 10px; position:absolute; /*position:sticky; top:8px; height:80vh;*/}
+
+	nav #notePad 			{ padding:25px 0 0 10px; width:230px; background:white; height:90vh; position:absolute; /*right:60px;  position:sticky; top:8px;*/}
+	nav #notePad p 			{ font-weight:bold; color:#6E6E6E; margin-bottom:5px }
+	nav #notePad input 		{ padding:.2em 1em; margin-top:.5em; }
+	nav #notePad textarea	{ width:90%; min-height:300px; max-height:60vh; padding:10px; display:block; resize:vertical; font-size:1.1rem; }
+
+	nav #Icons			{ background-color:#E8E8E8; width:50px; display:flex;/* height:80vh; position:sticky; top:8px;*/}
+	nav #Icons ul 		{ width:50px; display:block; text-align:center; padding-top:25px;}
+	nav #Icons li 		{ cursor:pointer; margin-bottom:25px; }
+	nav #Icons #menu	{ font-size:1.3rem; }
+	nav #Icons #note	{ font-size:2rem; display:none;  }
+
+	nav 		{ transition:min-width ease .7s; min-width:50px; }
+	nav > ul 	{ transition:left ease .7s;  left:-250px; }
+	nav > div	{ transition:left ease .7s;  left:-250px; }
+
+
+	#contentHolder	{ max-width:820px; margin:0 auto 100px; }
+	article.content { padding:15px 40px; }
+
+	.content p, 
+	.content li { line-height:normal; }
+		
+	footer 	{ max-width:800px; }
+	footer 	{ transition: width ease .7s; width:90%; }
+	
+
+	/*--Class used to change color of selected Icon (desktop version)--*/
+	.iconActivate 	{ color:#0B6CD1; }
+	/*--Class used to make the Navigation slide out when roll over (desktop version)--*/
+	.navSwitch		{ min-width:300px; }
+	.tocSwitch		{ left:0; }
+	/*--Class used to make the footer fit with the Navigation when it slides out (desktop version)--*/
+	.footFitNav		{ width:calc(100% - 330px) }
+
+	/*.absoluteNavElements	{ position:absolute; }*/
+	/*.fixedNavElements		{ position:fixed; margin-top:-69px; }*/
+}
+
+
+@media print {
+	*,
+	#menuBar	{ display:none; }
+	html, body 	{ display:block; background:none; }
+	print 		{ display:block; text-align:center; font-size:1.6em; margin-top:40vh; }
+}

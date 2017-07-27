@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest identifier="B1_11" version="1" 
+		xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
+		xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 		
+		
+		xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 interface_assets\frameworks\SCORM\imscp_rootv1p1p2.xsd
+		http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 interface_assets\frameworks\SCORM\imsmd_rootv1p2p1.xsd 
+		http://www.adlnet.org/xsd/adlcp_rootv1p2 interface_assets\frameworks\SCORM\adlcp_rootv1p2.xsd">
+
+
+<metadata>
+	<schema>ADL SCORM</schema>
+	<schemaversion>1.2</schemaversion>
+</metadata>
+
+
+<organizations default="org_pipwerks">
+	<organization identifier="org_pipwerks">
+		<title>Introduction to Analytics in Retail</title>
+		<item identifier="pipwerks_item01" identifierref="pipwerks_item01_resource">
+			<title>Introduction to Analytics in Retail</title>
+			<adlcp:masteryscore>50</adlcp:masteryscore>
+		</item>
+	</organization>
+</organizations>
+
+
+<resources>
+	<resource identifier="pipwerks_item01_resource" adlcp:scormtype="sco" href="launcher.html" type="webcontent">
+		<file href="interface_assets\frameworks\SCORM_API_wrapper.js"/>
+		<file href="launcher.html"/>
+	</resource>
+</resources>
+  
+
+</manifest>
